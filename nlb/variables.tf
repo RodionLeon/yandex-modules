@@ -70,7 +70,7 @@ variable "pip_zone_id" {
 variable "type" {
   description = "Network load balancer type; Can be internal or external"
   type        = string
-  default     = "internal"
+  default     = "external"
 }
 
 
