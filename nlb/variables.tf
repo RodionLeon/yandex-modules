@@ -29,15 +29,7 @@ variable "target_id" {
   type = string
 }
 
-variable "env" {
-    description = "Environmet var."
-    type = string
-}
 
-variable "folder_id" {
-    description = "Yandex Cloud folder id."
-    type = string
-}
 
 variable "description" {
   description = "Network load balancer description"
@@ -81,10 +73,6 @@ variable "type" {
   default     = "internal"
 }
 
-variable "target_id" {
-    description = "Target Group Name."
-    type = string
-}
 
 variable "listeners" {
   description = "Network load balancer listeners"
