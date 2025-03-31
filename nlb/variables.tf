@@ -80,8 +80,8 @@ variable "listeners" {
     name        = optional(string)
     port        = optional(number)
     target_port = optional(number)
-    protocol    = optional(string, "tcp")
-    is_public   = optional(bool, false)
+    protocol    = optional(string, "TCP")
+    is_public   = optional(bool, true)
     ip_version  = optional(string, "ipv4")
   }))
   default = []
