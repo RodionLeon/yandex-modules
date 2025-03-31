@@ -15,6 +15,30 @@ variable "name" {
   type        = string
 }
 
+variable "env" {
+  description = "env"
+  type = string
+}
+
+variable "folder_id" {
+  description = "folder id"
+  type = string
+}
+variable "target_id" {
+  description = "target id"
+  type = string
+}
+
+variable "env" {
+    description = "Environmet var."
+    type = string
+}
+
+variable "folder_id" {
+    description = "Yandex Cloud folder id."
+    type = string
+}
+
 variable "description" {
   description = "Network load balancer description"
   type        = string
@@ -55,6 +79,11 @@ variable "type" {
   description = "Network load balancer type; Can be internal or external"
   type        = string
   default     = "internal"
+}
+
+variable "target_id" {
+    description = "Target Group Name."
+    type = string
 }
 
 variable "listeners" {
