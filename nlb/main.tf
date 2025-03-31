@@ -3,7 +3,6 @@ resource "yandex_lb_network_load_balancer" "main" {
   labels      = var.labels
   name      = var.name
   folder_id = var.folder_id
-  region_id = var.region_id
   type      = var.type
 
   dynamic "listener" {
@@ -28,22 +27,4 @@ resource "yandex_lb_network_load_balancer" "main" {
     }
   }
   
-}
-
-resource "yandex_lb_target_group" "main" {
-  count = var.create_target_group ? 1 : 0
-
-  name        = var.name
-  description = var.description
-  labels      = var.labels
-
-  region_id = var.region_id
-
-  dynamic "target" {
-    for_each = var.targets
-    content {
-      subnet_id = target.value["subnet_id"]
-      address   = target.value["address"]
-    }
-  }
 }
