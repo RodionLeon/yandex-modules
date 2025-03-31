@@ -1,7 +1,7 @@
 resource "yandex_lb_network_load_balancer" "main" {
   description = var.description
   labels      = var.labels
-  name = "${var.env}-nlb"
+  name      = var.name
   folder_id = var.folder_id
   region_id = var.region_id
   type      = var.type
